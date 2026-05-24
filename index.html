@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Programate desarrolla backend, APIs, dashboards e integraciones robustas para empresas que quieren crecer.">
+  <title>Programate | Backend, APIs e integraciones a medida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <nav class="navbar" aria-label="Navegacion principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <span>&lt;P/&gt;</span>
+        </span>
+        <span>Programate</span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel">
+        <a href="#inicio">Inicio</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#nosotros">Sobre nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+          <span class="theme-toggle__text">Claro</span>
+        </button>
+        <a class="btn btn--primary nav-cta" href="#contacto">Hablemos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--with-bg section-reveal">
+      <div class="hero-bg" data-ambient-hero-background aria-hidden="true">
+        <canvas class="hero-bg-canvas"></canvas>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero__content hero-content">
+        <p class="badge">Backend · APIs · Sistemas a medida</p>
+        <h1>Backend seguro e integraciones que <span>impulsan tu negocio</span></h1>
+        <p class="hero-copy">Diseñamos y desarrollamos sistemas robustos, APIs e integraciones a medida para que tus aplicaciones funcionen, escalen y crezcan sin límites.</p>
+        <div class="hero-actions">
+          <a class="btn btn--whatsapp" id="hero-whatsapp" href="#" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
+          <a class="btn btn--primary" href="#contacto">Enviar consulta</a>
+        </div>
+        <div class="benefit-row" aria-label="Beneficios principales">
+          <span><i data-icon="shield"></i>Arquitectura robusta</span>
+          <span><i data-icon="plug"></i>Integraciones confiables</span>
+          <span><i data-icon="lock"></i>Datos y sistemas seguros</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Mockup de dashboard, API e integraciones">
+        <div class="hero-dashboard">
+          <div class="hero-dashboard__head">
+            <span></span><span></span><span></span>
+            <strong>system.health</strong>
+          </div>
+          <div class="hero-dashboard__grid">
+            <article>
+              <span>API Gateway</span>
+              <strong>200 OK</strong>
+            </article>
+            <article>
+              <span>Latencia</span>
+              <strong>142 ms</strong>
+            </article>
+            <article>
+              <span>Servicios</span>
+              <strong>18/20</strong>
+            </article>
+          </div>
+          <div class="hero-dashboard__chart">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="hero-dashboard__flow">
+            <span>/users</span>
+            <b></b>
+            <span>/orders</span>
+            <b></b>
+            <span>/payments</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-reveal" id="soluciones">
+      <div class="section-heading">
+        <p class="eyebrow">Soluciones</p>
+        <h2>Soluciones</h2>
+        <p>Sistemas, módulos e integraciones que construimos para que tu negocio funcione mejor.</p>
+      </div>
+      <div class="solutions-grid">
+        <article class="solution-card">
+          <i data-icon="server"></i>
+          <h3>Backend a medida</h3>
+          <p>Desarrollamos la lógica y arquitectura que tu producto necesita para ser rápido, mantenible y seguro.</p>
+        </article>
+        <article class="solution-card">
+          <i data-icon="api"></i>
+          <h3>APIs e integraciones</h3>
+          <p>Conectamos sistemas, plataformas y servicios para que tu negocio fluya sin fricciones.</p>
+        </article>
+        <article class="solution-card">
+          <i data-icon="secure"></i>
+          <h3>Sistemas seguros</h3>
+          <p>Aplicamos buenas prácticas, control de acceso y protección de datos en cada capa del sistema.</p>
+        </article>
+        <article class="solution-card">
+          <i data-icon="scale"></i>
+          <h3>Escalabilidad</h3>
+          <p>Arquitecturas preparadas para crecer en tráfico, datos y funcionalidades sin comprometer rendimiento.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-reveal" id="proceso">
+      <div class="section-heading">
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2>Cómo trabajamos</h2>
+        <p>Un proceso técnico, claro e iterativo para convertir una necesidad de negocio en software mantenible.</p>
+      </div>
+
+      <div class="process-layout">
+        <div class="process-terminal" aria-label="Resumen técnico del flujo de trabajo">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <strong>programate/workflow</strong>
+          </div>
+          <div class="terminal-body">
+            <p><span class="terminal-prompt">#</span><span class="terminal-text" style="--chars: 44;">analizar procesos, roles y reglas de negocio</span></p>
+            <p><span class="terminal-prompt">#</span><span class="terminal-text" style="--chars: 51;">diseñar arquitectura, endpoints y modelo de datos</span></p>
+            <p><span class="terminal-prompt">#</span><span class="terminal-text" style="--chars: 49;">desarrollar servicios, integraciones y paneles</span></p>
+            <p><span class="terminal-prompt">#</span><span class="terminal-text" style="--chars: 34;">desplegar, monitorear y evolucionar</span></p>
+          </div>
+        </div>
+
+        <div class="process-line">
+          <article class="process-step">
+            <span>01</span>
+            <div class="process-step__body">
+              <h3>Discovery técnico</h3>
+              <p>Relevamos procesos, usuarios, permisos, datos críticos y sistemas existentes para definir el alcance real.</p>
+              <small>Mapa funcional + prioridades.</small>
+            </div>
+          </article>
+          <article class="process-step">
+            <span>02</span>
+            <div class="process-step__body">
+              <h3>Arquitectura y modelo</h3>
+              <p>Diseñamos módulos, base de datos, APIs, integraciones y reglas de seguridad antes de escribir código.</p>
+              <small>Estructura técnica + endpoints.</small>
+            </div>
+          </article>
+          <article class="process-step">
+            <span>03</span>
+            <div class="process-step__body">
+              <h3>Desarrollo iterativo</h3>
+              <p>Construimos por ciclos cortos con código limpio, validaciones, manejo de errores y revisiones constantes.</p>
+              <small>Módulos funcionales y probables.</small>
+            </div>
+          </article>
+          <article class="process-step">
+            <span>04</span>
+            <div class="process-step__body">
+              <h3>Deploy y evolución</h3>
+              <p>Implementamos, medimos rendimiento, ajustamos flujos y dejamos una base lista para crecer.</p>
+              <small>Sistema publicado + mejoras.</small>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="developer-stack" aria-label="Buenas prácticas técnicas">
+        <article>
+          <strong>APIs claras</strong>
+          <p>Contratos simples, respuestas consistentes y endpoints pensados para escalar.</p>
+        </article>
+        <article>
+          <strong>Seguridad desde base</strong>
+          <p>Roles, permisos, validaciones y protección de datos en las capas sensibles.</p>
+        </article>
+        <article>
+          <strong>Integraciones mantenibles</strong>
+          <p>Webhooks, sincronizaciones y procesos preparados para fallos controlados.</p>
+        </article>
+        <article>
+          <strong>Operación real</strong>
+          <p>Logs, métricas y monitoreo para entender qué pasa cuando el sistema está en uso.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-reveal" id="proyectos">
+      <div class="section-heading">
+        <p class="eyebrow">Proyectos e integraciones</p>
+        <h2>Proyectos e integraciones</h2>
+        <p>Algunos ejemplos de módulos, paneles e integraciones que podemos desarrollar para tu negocio.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <button class="project-image" type="button" data-open-image aria-label="Ampliar imagen de Panel de administración">
+            <img
+              src="assets/img/admin-dashboard-dark.png"
+              data-image-dark="assets/img/admin-dashboard-dark.png"
+              data-image-light="assets/img/admin-dashboard-light.png"
+              alt="Mockup de panel de administración con métricas, usuarios y actividad del sistema"
+            >
+          </button>
+          <div class="project-card__body">
+            <h3>Panel de administración</h3>
+            <p>Gestión de usuarios, roles, permisos y actividad del sistema desde una interfaz clara, segura y profesional.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <button class="project-image" type="button" data-open-image aria-label="Ampliar imagen de Módulo de facturación">
+            <img
+              src="assets/img/facturacion-dark.png"
+              data-image-dark="assets/img/facturacion-dark.png"
+              data-image-light="assets/img/facturacion-light.png"
+              alt="Mockup de módulo de facturación con comprobantes, pagos y estados financieros"
+            >
+          </button>
+          <div class="project-card__body">
+            <h3>Módulo de facturación</h3>
+            <p>Emisión, seguimiento y conciliación de comprobantes, pagos y estados financieros en un solo lugar.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <button class="project-image" type="button" data-open-image aria-label="Ampliar imagen de Integración de pagos">
+            <img
+              src="assets/img/integracion-pagos-dark.png"
+              data-image-dark="assets/img/integracion-pagos-dark.png"
+              data-image-light="assets/img/integracion-pagos-light.png"
+              alt="Mockup de integración de pagos con Mercado Pago, Stripe, PayPal y eventos"
+            >
+          </button>
+          <div class="project-card__body">
+            <h3>Integración de pagos</h3>
+            <p>Conexión segura con pasarelas como Mercado Pago, Stripe o PayPal, con control de eventos, estados y conciliación.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <button class="project-image" type="button" data-open-image aria-label="Ampliar imagen de Sincronización de sistemas">
+            <img
+              src="assets/img/sincronizacion-sistemas-dark.png"
+              data-image-dark="assets/img/sincronizacion-sistemas-dark.png"
+              data-image-light="assets/img/sincronizacion-sistemas-light.png"
+              alt="Mockup de sincronización entre ERP, CRM, WMS, APIs externas y sistemas internos"
+            >
+          </button>
+          <div class="project-card__body">
+            <h3>Sincronización de sistemas</h3>
+            <p>Integración entre ERP, CRM, WMS, APIs externas y plataformas internas para mantener datos actualizados y procesos automáticos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section-reveal" id="nosotros">
+      <div class="about-card">
+        <div>
+          <p class="eyebrow">Sobre nosotros</p>
+          <h2>Sistemas, dashboards y backend a medida para empresas que quieren crecer.</h2>
+        </div>
+        <p>Programate combina criterio técnico, foco comercial y ejecución cuidada para construir software que resuelve procesos reales: paneles internos, automatizaciones, integraciones y servicios backend preparados para mantenerse en el tiempo.</p>
+      </div>
+    </section>
+
+    <section class="contact section-reveal" id="contacto">
+      <div class="contact-cta">
+        <p class="eyebrow">Contacto</p>
+        <h2>¿Tienes un proyecto en mente?</h2>
+        <strong>Hablemos y hagámoslo realidad.</strong>
+        <p>Cuéntanos tu idea y te ayudamos a convertirla en un sistema sólido, seguro y escalable.</p>
+        <a class="btn btn--whatsapp" id="contact-whatsapp" href="#" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
+        <small>Respuesta rápida y personalizada</small>
+      </div>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <label>
+          Nombre
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          Empresa
+          <input type="text" name="company" autocomplete="organization" required>
+        </label>
+        <label>
+          Encargo / Tipo de proyecto
+          <select name="projectType" required>
+            <option value="">Seleccionar una opción</option>
+            <option>Backend a medida</option>
+            <option>API o integración</option>
+            <option>Dashboard administrativo</option>
+            <option>SaaS o sistema de gestión</option>
+          </select>
+        </label>
+        <label class="form-wide">
+          Mensaje
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn btn--primary form-wide" type="submit">Enviar consulta</button>
+        <p class="form-status form-wide" id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <div class="image-modal" id="image-modal" aria-hidden="true">
+    <button class="image-modal__backdrop" type="button" data-close-modal aria-label="Cerrar imagen ampliada"></button>
+    <div class="image-modal__dialog" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+      <button class="image-modal__close" type="button" data-close-modal aria-label="Cerrar">×</button>
+      <img id="modal-image" src="" alt="">
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio">
+          <span class="brand-mark" aria-hidden="true"><span>&lt;P/&gt;</span></span>
+          <span>Programate</span>
+        </a>
+        <p>Desarrollamos backend, APIs e integraciones robustas y seguras para que tu negocio funcione sin límites.</p>
+        <div class="social-links" aria-label="Redes sociales">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">gh</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="mailto:hola@programate.com" aria-label="Email">@</a>
+        </div>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <a href="#inicio">Inicio</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div>
+        <h3>Soluciones</h3>
+        <a href="#soluciones">Backend a medida</a>
+        <a href="#soluciones">APIs e integraciones</a>
+        <a href="#soluciones">Sistemas seguros</a>
+        <a href="#soluciones">Escalabilidad</a>
+      </div>
+      <div>
+        <h3>Recursos</h3>
+        <a href="#">Blog</a>
+        <a href="#">Buenas prácticas</a>
+        <a href="#">Documentación</a>
+        <a href="#">Casos de uso</a>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <a href="mailto:hola@programate.com">hola@programate.com</a>
+        <a id="footer-whatsapp" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+        <p>Buenos Aires, Argentina</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Programate. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
