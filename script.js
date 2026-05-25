@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   initMenu();
   initWhatsappLinks();
+  initHomeLinks();
   initContactForm();
   initImageModal();
   initReveal();
@@ -385,6 +386,16 @@ function initMenu() {
   panel.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
 }
 
+function initHomeLinks() {
+  document.querySelectorAll('.brand[href="#inicio"]').forEach(link => {
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      history.replaceState(null, "", "#inicio");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+}
+
 function initWhatsappLinks() {
   const url = getWhatsappUrl(BRAND_CONFIG.whatsappMessage);
   ["hero-whatsapp", "contact-whatsapp", "footer-whatsapp"].forEach(id => {
@@ -431,6 +442,8 @@ function initImageModal() {
 
   const closeButtons = modal.querySelectorAll("[data-close-modal]");
   let lastFocusedElement = null;
+  let modalHistoryActive = false;
+  let modalScrollY = 0;
   const setModalOpen = isOpen => {
     modal.classList.toggle("is-open", isOpen);
     modal.setAttribute("aria-hidden", String(!isOpen));
@@ -442,10 +455,18 @@ function initImageModal() {
       const image = button.querySelector("img");
       if (!image) return;
 
+      const wasOpen = modal.classList.contains("is-open");
       lastFocusedElement = document.activeElement;
+      modalScrollY = window.scrollY;
       modalImage.src = image.currentSrc || image.src;
       modalImage.alt = image.alt;
       setModalOpen(true);
+
+      if (!wasOpen && !modalHistoryActive) {
+        history.pushState({ programateImageModal: true }, "", window.location.href);
+        modalHistoryActive = true;
+      }
+
       modal.querySelector(".image-modal__close")?.focus();
     });
   });
@@ -458,10 +479,23 @@ function initImageModal() {
     }
   });
 
-  function closeModal() {
+  window.addEventListener("popstate", () => {
+    if (modal.classList.contains("is-open")) {
+      closeModal({ fromHistory: true });
+    }
+  });
+
+  function closeModal({ fromHistory = false } = {}) {
     setModalOpen(false);
     modalImage.removeAttribute("src");
     modalImage.alt = "";
+
+    window.scrollTo({ top: modalScrollY, behavior: "auto" });
+
+    if (modalHistoryActive) {
+      modalHistoryActive = false;
+      if (!fromHistory) history.back();
+    }
 
     if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
       lastFocusedElement.focus();

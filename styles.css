@@ -1368,7 +1368,20 @@ textarea:focus {
   }
 
   .project-image {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-card__body {
+    padding: 1rem;
+  }
+
+  .project-card__body h3 {
+    font-size: 1.02rem;
+  }
+
+  .project-card p {
+    font-size: .92rem;
+    line-height: 1.55;
   }
 
   .image-modal {
