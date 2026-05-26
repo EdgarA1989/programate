@@ -1,6 +1,6 @@
 const BRAND_CONFIG = {
   whatsappNumber: "549XXXXXXXXXX",
-  whatsappMessage: "Hola, quiero consultar por un proyecto de backend, API o sistema a medida.",
+  whatsappMessage: "Hola, quiero consultar por un dashboard, sistema de gestión o integración de datos.",
 };
 
 const ICONS = {
@@ -11,6 +11,9 @@ const ICONS = {
   api: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 8H5a3 3 0 0 0 0 6h2M17 8h2a3 3 0 0 1 0 6h-2M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 8l-2 8M16 8l-2 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   secure: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11V8a8 8 0 0 1 16 0v3" stroke="currentColor" stroke-width="2"/><rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 15v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   scale: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 15l3-3 3 2 5-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  chart: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 15l3-4 3 2 5-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  report: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h7l4 4v14H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="2"/><path d="M14 3v5h5M8 14h8M8 18h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  kpi: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -252,39 +255,39 @@ function AmbientHeroBackground(root) {
     const isLight = document.body.classList.contains("light");
     if (isLight) {
       return {
-        base: "#dce8fb",
-        mid: "#cbdcf7",
-        end: "#eef4ff",
+        base: "#e8f7ee",
+        mid: "#d8f4e3",
+        end: "#f8faf9",
         composite: "multiply",
-        grid: "rgba(37,87,232,.28)",
+        grid: "rgba(22,163,74,.26)",
         gridAlpha: .62,
-        line: "rgba(37,87,232,.52)",
+        line: "rgba(22,163,74,.48)",
         lineAlpha: .78,
-        node: "rgba(24,78,214,.9)",
+        node: "rgba(22,101,52,.88)",
         nodeAlpha: .9,
-        nodeGlow: ["rgba(37,87,232,.34)", "rgba(124,58,237,.3)", "rgba(6,182,212,.26)"],
-        packet: ["rgba(20,82,235,.95)", "rgba(112,44,230,.9)", "rgba(0,151,185,.86)"],
+        nodeGlow: ["rgba(34,197,94,.32)", "rgba(74,222,128,.26)", "rgba(20,184,166,.2)"],
+        packet: ["rgba(22,163,74,.95)", "rgba(34,197,94,.88)", "rgba(20,184,166,.76)"],
         packetAlpha: .9,
-        code: "rgba(24,78,214,.56)",
+        code: "rgba(22,101,52,.52)",
         codeAlpha: .62,
       };
     }
 
     return {
-      base: "#07101f",
-      mid: "#0d1a2d",
-      end: "#07101f",
+      base: "#07110d",
+      mid: "#0d1a14",
+      end: "#07110d",
       composite: "screen",
-      grid: "rgba(109,124,255,.18)",
+      grid: "rgba(74,222,128,.16)",
       gridAlpha: .48,
-      line: "rgba(109,124,255,.38)",
+      line: "rgba(74,222,128,.34)",
       lineAlpha: .64,
-      node: "rgba(130,146,255,.86)",
+      node: "rgba(74,222,128,.86)",
       nodeAlpha: .86,
-      nodeGlow: ["rgba(109,124,255,.34)", "rgba(143,92,247,.28)", "rgba(6,182,212,.24)"],
-      packet: ["rgba(130,146,255,.95)", "rgba(171,128,255,.86)", "rgba(60,211,239,.82)"],
+      nodeGlow: ["rgba(34,197,94,.32)", "rgba(74,222,128,.26)", "rgba(20,184,166,.2)"],
+      packet: ["rgba(74,222,128,.95)", "rgba(34,197,94,.86)", "rgba(20,184,166,.76)"],
       packetAlpha: .82,
-      code: "rgba(164,177,255,.38)",
+      code: "rgba(187,247,208,.36)",
       codeAlpha: .46,
     };
   }
@@ -398,7 +401,7 @@ function initHomeLinks() {
 
 function initWhatsappLinks() {
   const url = getWhatsappUrl(BRAND_CONFIG.whatsappMessage);
-  ["hero-whatsapp", "contact-whatsapp", "footer-whatsapp"].forEach(id => {
+  ["hero-whatsapp", "contact-whatsapp", "instant-whatsapp", "footer-whatsapp"].forEach(id => {
     const link = document.getElementById(id);
     if (link) link.href = url;
   });
