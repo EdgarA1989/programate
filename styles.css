@@ -1,19 +1,19 @@
 :root {
-  --bg: #07110d;
-  --bg-soft: #0d1a14;
-  --surface: rgba(16, 31, 24, .82);
-  --surface-solid: #101f18;
-  --surface-elevated: #13261d;
+  --bg: #050606;
+  --bg-soft: #0b0d0c;
+  --surface: rgba(18, 19, 18, .88);
+  --surface-solid: #111312;
+  --surface-elevated: #181a19;
   --text: #f8fafc;
   --muted: #cbd5e1;
   --muted-soft: #94a3b8;
-  --line: rgba(74, 222, 128, .16);
+  --line: rgba(22, 184, 106, .16);
   --card-line: rgba(255, 255, 255, .08);
-  --accent: #22c55e;
-  --accent-2: #4ade80;
-  --accent-soft: rgba(34, 197, 94, .1);
-  --success: #22c55e;
-  --success-dark: #16a34a;
+  --accent: #10b981;
+  --accent-2: #34d399;
+  --accent-soft: rgba(16, 185, 129, .1);
+  --success: #10b981;
+  --success-dark: #047857;
   --warning: #f59e0b;
   --danger: #ef4444;
   --shadow: 0 24px 70px rgba(0, 0, 0, .34);
@@ -26,7 +26,7 @@
 }
 
 body.light {
-  --bg: #f8faf9;
+  --bg: #f8f8f7;
   --bg-soft: #ffffff;
   --surface: rgba(255, 255, 255, .86);
   --surface-solid: #ffffff;
@@ -36,9 +36,9 @@ body.light {
   --muted-soft: #64748b;
   --line: #e2e8f0;
   --card-line: #e2e8f0;
-  --accent: #16a34a;
-  --accent-2: #22c55e;
-  --accent-soft: #dcfce7;
+  --accent: #047857;
+  --accent-2: #10b981;
+  --accent-soft: #ecfdf5;
   --shadow: 0 24px 70px rgba(15, 23, 42, .08);
   --shadow-soft: 0 14px 42px rgba(15, 23, 42, .08);
 }
@@ -57,8 +57,8 @@ body {
   color: var(--text);
   font-family: var(--font);
   background:
-    radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 24rem),
-    radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 22rem),
+    radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--accent) 4%, transparent), transparent 24rem),
+    radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--accent-2) 3%, transparent), transparent 22rem),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 52%, var(--bg) 100%);
   transition: background .25s ease, color .25s ease;
 }
@@ -308,8 +308,8 @@ body.light .theme-toggle__icon::before {
   z-index: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 78% 44%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 26rem),
-    radial-gradient(circle at 62% 18%, color-mix(in srgb, var(--accent-2) 14%, transparent), transparent 22rem),
+    radial-gradient(circle at 78% 44%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 26rem),
+    radial-gradient(circle at 62% 18%, color-mix(in srgb, var(--accent-2) 6%, transparent), transparent 22rem),
     linear-gradient(135deg, var(--bg), var(--bg-soft));
   pointer-events: none;
 }
@@ -335,8 +335,8 @@ body.light .theme-toggle__icon::before {
 
 body.light .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(248, 250, 249, .84) 0%, rgba(220, 252, 231, .58) 40%, rgba(220, 252, 231, .18) 76%, rgba(220, 252, 231, .08) 100%),
-    linear-gradient(180deg, rgba(220, 252, 231, .26) 0%, rgba(220, 252, 231, .08) 58%, var(--bg) 100%);
+    linear-gradient(90deg, rgba(248, 248, 247, .88) 0%, rgba(248, 248, 247, .62) 42%, rgba(248, 248, 247, .22) 76%, rgba(248, 248, 247, .08) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, .3) 0%, rgba(255, 255, 255, .08) 58%, var(--bg) 100%);
 }
 
 .hero__content {
@@ -372,8 +372,8 @@ body.light .hero__content {
 }
 
 body.light .badge {
-  color: #166534;
-  background: #dcfce7;
+  color: #065f46;
+  background: #ecfdf5;
   box-shadow: 0 14px 36px rgba(15, 23, 42, .08);
 }
 
@@ -973,7 +973,7 @@ body.light .hero-copy {
 
 .comparison-card--success li::before {
   content: "✓";
-  color: #052e16;
+  color: #06140a;
   background: var(--accent);
 }
 
@@ -992,7 +992,7 @@ body.light .hero-copy {
 .results-grid strong {
   display: block;
   margin-bottom: .45rem;
-  color: #16a34a;
+  color: #047857;
   font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: -.05em;
 }
@@ -1472,8 +1472,8 @@ textarea:focus {
 
   body.light .hero-overlay {
     background:
-      linear-gradient(180deg, rgba(220, 252, 231, .7) 0%, rgba(220, 252, 231, .46) 58%, var(--bg) 100%),
-      linear-gradient(90deg, rgba(220, 252, 231, .54) 0%, rgba(187, 247, 208, .18) 100%);
+      linear-gradient(180deg, rgba(248, 248, 247, .76) 0%, rgba(248, 248, 247, .5) 58%, var(--bg) 100%),
+      linear-gradient(90deg, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, .18) 100%);
   }
 
   h1 {
