@@ -1593,7 +1593,18 @@ textarea:focus {
     padding-right: 0;
     border-right: 0;
     white-space: normal;
-    animation: none !important;
+    clip-path: inset(0 100% 0 0);
+    animation: none;
+  }
+
+  #proceso.is-visible .terminal-body p:nth-child(1) .terminal-text { animation: terminalRevealMobile 1.1s ease .15s both; }
+  #proceso.is-visible .terminal-body p:nth-child(2) .terminal-text { animation: terminalRevealMobile 1.1s ease .5s  both; }
+  #proceso.is-visible .terminal-body p:nth-child(3) .terminal-text { animation: terminalRevealMobile 1.1s ease .85s both; }
+  #proceso.is-visible .terminal-body p:nth-child(4) .terminal-text { animation: terminalRevealMobile 1.1s ease 1.2s both; }
+
+  @keyframes terminalRevealMobile {
+    from { clip-path: inset(0 100% 0 0); }
+    to   { clip-path: inset(0 0%   0 0); }
   }
 
   .project-image {
@@ -1652,9 +1663,13 @@ textarea:focus {
     transition-duration: .01ms !important;
   }
 
-  .terminal-text {
-    width: auto;
+  .terminal-text,
+  #proceso.is-visible .terminal-body p:nth-child(1) .terminal-text,
+  #proceso.is-visible .terminal-body p:nth-child(2) .terminal-text,
+  #proceso.is-visible .terminal-body p:nth-child(3) .terminal-text,
+  #proceso.is-visible .terminal-body p:nth-child(4) .terminal-text {
+    clip-path: none !important;
     border-right: 0;
-    animation: none;
+    animation: none !important;
   }
 }
