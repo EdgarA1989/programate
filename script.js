@@ -401,7 +401,7 @@ function initHomeLinks() {
 
 function initWhatsappLinks() {
   const url = getWhatsappUrl(BRAND_CONFIG.whatsappMessage);
-  ["hero-whatsapp", "contact-whatsapp", "instant-whatsapp", "footer-whatsapp"].forEach(id => {
+  ["hero-whatsapp", "contact-whatsapp", "footer-whatsapp"].forEach(id => {
     const link = document.getElementById(id);
     if (link) link.href = url;
   });
